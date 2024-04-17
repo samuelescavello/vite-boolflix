@@ -5,10 +5,10 @@
 
         <nav class="navbar">
             <div class="container-fluid">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-danger" type="submit">Search</button>
-                </form>
+                <div class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="text" @keyup.enter="$emit('statusSearch')" v-model="store.filterFilm">
+                    <button class="btn btn-outline-danger" type="submit" @click="$emit('statusSearch')">Search</button>
+                </div>
             </div>
         </nav>
     
@@ -16,9 +16,16 @@
 </template>
 
 <script>
+import {store} from '../store.js';
     export default {
         name: 'HeaderComponent',
+        data(){
+            return{
+                store
+            }
+        }
     }
+    
 </script>
 
 <style lang="scss" scoped>

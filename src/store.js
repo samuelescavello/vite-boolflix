@@ -9,10 +9,11 @@ export const store = reactive({
     options:{
         params:{
             api_key: 'edbb48568da179f473b1480294ce4f47',
-            query:'a'
+            query:''
         }
     },
     movies: [],
     series: [],
     imageUrl: 'http://image.tmdb.org/t/p/original',
+    filterFilm:''
 });

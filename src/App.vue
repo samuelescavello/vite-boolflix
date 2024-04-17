@@ -1,5 +1,5 @@
 <template>
-  <headerComponent/>
+  <headerComponent @statusSearch="setParams"/>
   <MainComponent/>
 </template>
 
@@ -19,7 +19,14 @@ import {store} from './store.js';
       }
     },
     methods: {
-
+      setParams(){
+        if(this.store.filterFilm){
+          this.store.options.params.movie = this.store.filterFilm
+        }else{
+          this.store.options.params.query=''
+        }
+        this.getMovies()
+      },
       getMovies() {
         axios.get(this.store.apiUrl+this.store.endPoint.movie, this.store.options).then((res) => {
           this.store.movies=res.data.results
@@ -36,8 +43,7 @@ import {store} from './store.js';
     },
   
     created(){
-      this.getMovies();
-      this.getSerieTv();
+      
     }
   }
 </script>
