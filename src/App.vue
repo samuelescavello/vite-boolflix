@@ -26,6 +26,7 @@ import {store} from './store.js';
           this.store.options.params.query=''
         }
         this.getMovies()
+        this.getSerieTv()
       },
       getMovies() {
         axios.get(this.store.apiUrl+this.store.endPoint.movie, this.store.options).then((res) => {
