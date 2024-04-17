@@ -12,4 +12,6 @@ export const store = reactive({
             query:'a'
         }
     },
+    movies: [],
+    series: [],
 });
