@@ -1,4 +1,5 @@
 <template>
+   
     <div class="card my-2">
         <img :src="img" class="card-img-top" :alt="title">
         <div class="card-body">

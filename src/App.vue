@@ -21,7 +21,7 @@ import {store} from './store.js';
     methods: {
       setParams(){
         if(this.store.filterFilm){
-          this.store.options.params.movie = this.store.filterFilm
+          this.store.options.params.query = this.store.filterFilm
         }else{
           this.store.options.params.query=''
         }
@@ -43,7 +43,8 @@ import {store} from './store.js';
     },
   
     created(){
-      
+      // this.getMovies();
+      // this.getSerieTv();
     }
   }
 </script>
