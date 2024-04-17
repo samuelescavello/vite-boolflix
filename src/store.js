@@ -14,4 +14,5 @@ export const store = reactive({
     },
     movies: [],
     series: [],
+    imageUrl: 'http://image.tmdb.org/t/p/original',
 });

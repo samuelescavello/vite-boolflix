@@ -1,6 +1,6 @@
 <template>
     <div class="card my-2">
-        <!-- <img :src="immagine" class="card-img-top" :alt="nome"> -->
+        <img :src="img" class="card-img-top" :alt="title">
         <div class="card-body">
             <h5 class="card-title text-uppercase text-center">{{title}}</h5>
             <p class="card-text text-center">
@@ -16,7 +16,7 @@
 <script>
     export default {
         name: 'CardComponent',
-        props:['title','secondTitle','lenguages','vote'],
+        props:['title','secondTitle','lenguages','vote','img'],
     }
 </script>
 
