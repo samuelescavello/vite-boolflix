@@ -1,7 +1,7 @@
 <template>
     <header class="py-3 d-flex justify-content-between">
        
-        <h1 class="text-uppercase px-4 ">samflix</h1>
+        <img src="../assets/img/Netflix_Logo.svg" alt="">
 
         <nav class="navbar">
             <div class="container-fluid">
@@ -26,7 +26,8 @@
         background-color: black;
     }
 
-    h1{
-        color: red;
+    img{
+        width: 150px;
+        padding-left: 20px;
     }
 </style>
