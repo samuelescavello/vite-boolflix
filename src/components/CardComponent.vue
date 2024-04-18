@@ -50,7 +50,7 @@ export default {
 
 <style lang="scss" scoped>
 .star i {
-    color: rgb(255, 217, 0);
+    color: red
 }
 .flag {
     img{
@@ -101,30 +101,30 @@ img{
 h6{
     padding-bottom: 20px;
 }
-// ::-webkit-scrollbar {
-//   width: 5px;
-// }
-// ::-webkit-scrollbar-track {
-//   background: black; 
-// }
-// ::-webkit-scrollbar-thumb {
-//   background: red; 
-// }
-// ::-webkit-scrollbar-thumb:hover {
-//   background: black; 
-// }
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 3px grey; 
-  border-radius: 7px;
+  background: black; 
 }
 ::-webkit-scrollbar-thumb {
   background: red; 
-  border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #b30000; 
+  background: black; 
 }
+// ::-webkit-scrollbar {
+//   width: 15px;
+// }
+// ::-webkit-scrollbar-track {
+//   box-shadow: inset 0 0 3px grey; 
+//   border-radius: 7px;
+// }
+// ::-webkit-scrollbar-thumb {
+//   background: red; 
+//   border-radius: 5px;
+// }
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #b30000; 
+// }
 </style>
