@@ -3,7 +3,7 @@
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <img :src="img" :alt="title" >
+                <img :src="img" :alt="title" @error="imgDefault" >
             </div>
             <div class="flip-card-back  ">
                 <div class="pt-5">
@@ -11,7 +11,7 @@
                         <h6>original tile: <br> {{ title }}</h6>
                         <h6>second title: <br> {{ secondTitle }}</h6>
                         <div class="flag">
-                            <img :src="`/images/${language}.png`" :alt="language">
+                            <img :src="`/images/${language}.png`" :alt="language" @error="flagDefault">
                         </div>
                         <div class="star">
                           <i :class="{'fa-solid' : i <= votestar, 'fa-regular' : i > votestar}" class="fa-star" v-for="i in 5"></i>
@@ -31,6 +31,14 @@
 export default {
     name: 'CardComponent',
     props: ['title', 'secondTitle', 'language', 'vote', 'img','overview'],
+    methods: {
+      imgDefault(event){
+        event.target.src = 'https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg'
+      },
+      flagDefault(event){
+        event.target.src = '/images/help.webp'
+      }
+    },
     computed:{
       votestar () {
         return Math.ceil(this.vote / 2)
