@@ -16,6 +16,9 @@
                         <div class="star">
                           <i :class="{'fa-solid' : i <= votestar, 'fa-regular' : i > votestar}" class="fa-star" v-for="i in 5"></i>
                         </div>
+                        <h6>
+                            {{ overview }}
+                        </h6>
                     </p>
                 </div>
             </div>
@@ -27,7 +30,7 @@
 <script>
 export default {
     name: 'CardComponent',
-    props: ['title', 'secondTitle', 'language', 'vote', 'img'],
+    props: ['title', 'secondTitle', 'language', 'vote', 'img','overview'],
     computed:{
       votestar () {
         return Math.ceil(this.vote / 2)
@@ -38,7 +41,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.star i {
+    color: rgb(255, 217, 0);
+}
 .flag {
     img{
         width: 40px;
@@ -77,6 +82,9 @@ export default {
   background-color: black;
   color: white;
   transform: rotateY(180deg);
+  overflow-y: auto;
+  overflow-x: hidden;
+
 }
 img{
     width: 100%;
