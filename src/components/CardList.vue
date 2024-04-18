@@ -13,7 +13,7 @@
         <h2>serietv</h2>
         <div class="row" >
             <div class="col" v-for="serieTV in store.series">
-                <CardComponent :img="store.imageUrl + serieTV.poster_path" :id="serieTV.id" :title="serieTV.original_name" :secondTitle="serieTV.name" :lenguages="serieTV.original_lenguages" :vote="serieTV.vote_average"/>
+                <CardComponent :img="store.imageUrl + serieTV.poster_path" :id="serieTV.id" :title="serieTV.original_name" :secondTitle="serieTV.name" :language="serieTV.original_language" :vote="serieTV.vote_average"/>
             </div>
         </div>
     </div>

@@ -10,12 +10,17 @@
                     <p>
                         <h6>original tile: <br> {{ title }}</h6>
                         <h6>second title: <br> {{ secondTitle }}</h6>
-                        <h6>original language: <br>{{ language }}</h6>
-                        <h6>vote: <br>{{ vote }}</h6>
+                        <div class="flag">
+                            <img :src="`/images/${language}.png`" :alt="language">
+                        </div>
+                        <div class="star">
+                          <i :class="{'fa-solid' : i <= votestar, 'fa-regular' : i > votestar}" class="fa-star" v-for="i in 5"></i>
+                        </div>
                     </p>
                 </div>
             </div>
         </div>
+        
     </div>
 </template>
 
@@ -23,10 +28,22 @@
 export default {
     name: 'CardComponent',
     props: ['title', 'secondTitle', 'language', 'vote', 'img'],
-}
+    computed:{
+      votestar () {
+        return Math.ceil(this.vote / 2)
+      }
+    },
+   }
+
 </script>
 
 <style lang="scss" scoped>
+
+.flag {
+    img{
+        width: 40px;
+    }
+}
 .flip-card {
   background-color: transparent;
   width: 300px;
