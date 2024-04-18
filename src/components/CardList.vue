@@ -1,8 +1,8 @@
 <template>
-    
+    <div class="text-uppercase text-center mt-5" v-if="store.movies.length === 0 " ><h1><em>cerca qualcosa...</em></h1></div>
     <div class="container">
         <div v-if="store.movies.length > 0">
-            <h2  class="text-uppercase">film</h2>
+            <h2  class="text-uppercase"><em>film</em></h2>
         </div>
         <div class="row " >
             <div class="col" v-for="movie in store.movies">
@@ -13,7 +13,7 @@
 
     <div class="container">
         <div v-if="store.series.length > 0">
-            <h2 class="text-uppercase">serietv</h2>
+            <h2 class="text-uppercase"><em>serie tv</em></h2>
         </div>
         <div class="row" >
             <div class="col" v-for="serieTV in store.series">
@@ -42,6 +42,9 @@ import CardComponent from './CardComponent.vue';
 
 <style lang="scss" scoped>
     h2{
+        color: red;
+    }
+    h1{
         color: red;
     }
 </style>
