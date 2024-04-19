@@ -1,9 +1,11 @@
 <template>
+  <LoaderComponent/>
   <headerComponent @statusSearch="setParams"/>
   <MainComponent/>
 </template>
 
 <script>
+import LoaderComponent from './components/LoaderComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import axios from 'axios';
@@ -11,7 +13,7 @@ import {store} from './store.js';
   export default {
     name: 'App',
     components: {
-      HeaderComponent,MainComponent
+      HeaderComponent,MainComponent,LoaderComponent
     },
     data() {
       return {
