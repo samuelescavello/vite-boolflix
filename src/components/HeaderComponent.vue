@@ -1,5 +1,5 @@
 <template>
-    <header class="py-3 d-flex justify-content-between">
+    <header class="py-3 d-flex justify-content-between fixed-top ">
        
         <img src="../assets/img/Netflix_Logo.svg" alt="">
 
@@ -30,7 +30,7 @@ import {store} from '../store.js';
 
 <style lang="scss" scoped>
     header{
-        background-color: black;
+        background-color: black; 
     }
 
     img{

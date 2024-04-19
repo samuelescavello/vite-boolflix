@@ -81,6 +81,7 @@ export default {
   height: 100%;
   -webkit-backface-visibility: hidden; 
   backface-visibility: hidden;
+  scroll-behavior: smooth;
 }
 .flip-card-front {
   background-color: #bbb;
@@ -113,6 +114,7 @@ h6{
 ::-webkit-scrollbar-thumb:hover {
   background: black; 
 }
+
 // ::-webkit-scrollbar {
 //   width: 15px;
 // }
