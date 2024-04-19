@@ -20,5 +20,6 @@ export const store = reactive({
     popularMovies: [],
     popularSeries: [],
     imageUrl: 'http://image.tmdb.org/t/p/original',
-    filterFilm:''
+    filterFilm:'',
+    isloaded : true
 });

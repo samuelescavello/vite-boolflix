@@ -1,5 +1,5 @@
 <template>
-  <LoaderComponent/>
+  <LoaderComponent v-if="!store.isloaded"/>
   <headerComponent @statusSearch="setParams"/>
   <MainComponent/>
 </template>
@@ -31,9 +31,18 @@ import {store} from './store.js';
         this.getSerieTv()
       },
       getMovies() {
+        console.log(this.store.isloaded)
+        this.store.isloaded = false;
         axios.get(this.store.apiUrl+this.store.endPoint.movie, this.store.options).then((res) => {
           this.store.movies=res.data.results
           console.log(res.data.results);
+        }).catch((err) => {
+          console.log(err);
+        }).finally(() => {
+          setTimeout(() => {
+            this.store.isloaded = true;
+          },3000)
+          
         })
       },
       getSerieTv() {

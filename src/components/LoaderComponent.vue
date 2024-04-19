@@ -1,5 +1,5 @@
 <template>
-    <div class="loader" v-if="!isloaded">
+    <div class="loader">
         <div class="cube">n</div>
         <div class="cube">e</div>
         <div class="cube">t</div>
@@ -15,17 +15,9 @@
         name: 'LoaderComponent',
         data () {
             return {
-               isloaded : false
+               
             }
         },
-        mounted() {
-            document.onreadystatechange = () => {
-                if (document.readyState == "complete") {
-                    this.isloaded = true
-                }
-            }
-        },
-       
     }
 </script>
 
@@ -45,6 +37,7 @@
     .cube {
         width: 100px;
         height: 100px;
+        border-radius: 50%;
         margin-right: 10px;
         background-color: red;
         text-align: center;
