@@ -21,6 +21,28 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div>
+            <h2 class="text-uppercase"><em>most popular movie</em></h2>
+        </div>
+        <div class="row" >
+            <div class="col" v-for="popular in store.popularMovies">
+                <CardComponent :img="store.imageUrl + popular.poster_path" :id="popular.id" :title="popular.original_title" :secondTitle="popular.title" :language="popular.original_language" :vote="popular.vote_average" :overview="popular.overview"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div>
+            <h2 class="text-uppercase"><em>most popular serie tv</em></h2>
+        </div>
+        <div class="row" >
+            <div class="col" v-for="popular in store.popularSeries">
+                <CardComponent :img="store.imageUrl + popular.poster_path" :id="popular.id" :title="popular.original_title" :secondTitle="popular.title" :language="popular.original_language" :vote="popular.vote_average" :overview="popular.overview"/>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>

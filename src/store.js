@@ -4,7 +4,10 @@ export const store = reactive({
     apiUrl: 'https://api.themoviedb.org/3/',
     endPoint:{
         movie:'search/movie',
-        serieTv: 'search/tv'
+        serieTv: 'search/tv',
+        popularMovie: 'movie/popular',
+        popularSerieTv: 'tv/popular'
+        
     },
     options:{
         params:{
@@ -14,6 +17,8 @@ export const store = reactive({
     },
     movies: [],
     series: [],
+    popularMovies: [],
+    popularSeries: [],
     imageUrl: 'http://image.tmdb.org/t/p/original',
     filterFilm:''
 });

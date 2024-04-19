@@ -40,12 +40,26 @@ import {store} from './store.js';
         console.log(res.data.results);
        })
      },
+
+     getPopularMovie(){
+      axios.get(this.store.apiUrl+this.store.endPoint.popularMovie, this.store.options).then((res) => {
+        this.store.popularMovies=res.data.results
+      })
+     },
+
+     getPopularSerie(){
+      axios.get(this.store.apiUrl+this.store.endPoint.popularSerieTv, this.store.options).then((res) => {
+        this.store.popularSeries=res.data.results
+      })
+     }
      
     },
   
     created(){
       // this.getMovies();
       // this.getSerieTv();
+      this.getPopularMovie()
+      this.getPopularSerie()
     }
   }
 </script>
